@@ -14,15 +14,10 @@ class Employee
   def self.build(type: :regular)
     new type: type
   end
+end
 
-  private
-
+class Boss < Employee
   def bonus
-    value = case @type
-      when :regular then 0
-      when :boss    then 1500.0
-      when :manager then 800.0
-    end
+    1500.0
   end
-
 end
